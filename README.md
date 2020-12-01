@@ -3,7 +3,7 @@
 
 This Docker image contains additional libraries alongside the official Judge0 image.
 ### How do I use this?
-Follow [official deployment procedure](https://github.com/judge0/judge0/blob/master/CHANGELOG.md#deployment-procedure) and after extracting Judge0 ZIP archive edit `docker-compose.yml` and change Docker image from `judge0/judge:X.Y.Z` to `registry.gitlab.com/edgar-group/judge0:X.Y.Z`.
+Follow [official deployment procedure](https://github.com/judge0/judge0/blob/master/CHANGELOG.md#deployment-procedure) and after extracting Judge0 ZIP archive edit `docker-compose.yml` and change Docker image from `judge0/judge0:X.Y.Z` to `registry.gitlab.com/edgar-group/judge0:X.Y.Z`.
 
 After this edit, follow the rest of the procedure.
 
