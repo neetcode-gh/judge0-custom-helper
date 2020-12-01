@@ -20,4 +20,11 @@ Finally, you need to push this newly created image to GitLab Registry:
 docker push registry.gitlab.com/edgar-group/judge0:X.Y.Z
 ```
 
-Please note that in order for `docker push` to work you need to login to GitLab's Registry since not everyone are allowed to write to your repository registry.
+---
+
+Please note that in order for `docker push` to work you need to login to GitLab's Registry since not everyone are allowed to write to your repository registry. To do that you need to:
+```
+docker login registry.gitlab.com
+```
+
+Enter your GitLab username and password on prompt.
