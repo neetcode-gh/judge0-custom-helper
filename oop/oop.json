@@ -4,6 +4,6 @@
     is_archived: false,
     source_file: "Main.java",
     compile_cmd: "/usr/lib/jvm/jdk-17.0.2/bin/javac %s Main.java",
-    run_cmd: "/usr/lib/jvm/jdk-17.0.2/bin/java Main"
+    run_cmd: "/usr/lib/jvm/jdk-17.0.2/bin/java -cp /usr/lib/jvm/edgar-libs/edgar.jar:. Main"
   }
 ]

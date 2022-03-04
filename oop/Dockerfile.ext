@@ -9,7 +9,10 @@ RUN mkdir -p /tmp/java && \
     rm /tmp/java/*
     
 
-# Install Edgar library
-RUN mkdir -p /usr/lib/jvm/edgar-libs && \
-    wget kent.zpr.fer.hr/edgar.jar -O /usr/lib/jvm/edgar-libs/edgar.jar
-    
+## Install Edgar library from kent
+# RUN mkdir -p /usr/lib/jvm/edgar-libs && \
+#     wget kent.zpr.fer.hr/edgar.jar -O /usr/lib/jvm/edgar-libs/edgar.jar
+
+
+# Install local copy of Edgar library
+COPY oop/edgar-oop.jar /usr/lib/jvm/edgar-libs/edgar.jar
