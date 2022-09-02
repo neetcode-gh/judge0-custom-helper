@@ -1,10 +1,16 @@
-FROM judge0_builder as judge0_builder
+FROM judge0_builder as judge0_builder_nasp
 
+# Eigen
 ENV EIGEN_VERSION 3.3.8
 RUN set -xe && \
     curl -fSsL "https://gitlab.com/libeigen/eigen/-/archive/$EIGEN_VERSION/eigen-$EIGEN_VERSION.zip" -o /tmp/eigen.zip && \
     unzip /tmp/eigen.zip -d /tmp && \
     mv /tmp/eigen-$EIGEN_VERSION/Eigen /usr/include && \
     rm -rf /tmp/*
+
+
+RUN apt-get update && \
+    apt-get install -y python3-pip && \
+    pip3 install numpy
 
 

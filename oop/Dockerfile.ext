@@ -1,4 +1,4 @@
-FROM judge0_builder as judge0_builder
+FROM judge0_builder as judge0_builder_oop
 
 # Install latest JDK
 RUN mkdir -p /tmp/java && \
