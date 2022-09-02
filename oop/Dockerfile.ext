@@ -1,4 +1,3 @@
-FROM judge0_builder as judge0_builder_oop
 
 # Install latest JDK
 RUN mkdir -p /tmp/java && \
@@ -6,7 +5,8 @@ RUN mkdir -p /tmp/java && \
     wget https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz.sha256 -P /tmp/java && \
     echo "$(sha256sum /tmp/java/openjdk-17.0.2_linux-x64_bin.tar.gz)" | xargs printf '%s %s' "$1" "$2" | sha256sum --check && \
     tar xfvz /tmp/java/openjdk-17.0.2_linux-x64_bin.tar.gz --directory /usr/lib/jvm && \
-    rm /tmp/java/*
+    rm /tmp/java/* && \
+    ls /usr/lib/jvm # To confirm that the directory has the jdk-17.0.2 file!
     
 
 ## Install Edgar library from kent
