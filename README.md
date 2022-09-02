@@ -15,7 +15,7 @@ The script goes through each subdirectory of the project and gathers all of the 
 The `Dockerfile.langs` file is responsible for injecting additional language dependencies into the Judge0 database, which are specified in JSON files in each of the subdirectories. How this works is described in the [Adding langugaes](#adding-languages) section.
 
 #### Adding dependencies
-Additional dependencies are specified in a `Dockerfile.ext` file. The file has to start with the statement `FROM judge0_build as judge0_builder`, since the files are concatenated into a multistage docker build image. After the `FROM` statement the files can be written as regular Dockerfiles, only the `FROM` statement is "reserved". Example from the *nasp* subdirectory, where we require the **Eigen** library depndency:
+Additional dependencies are specified in a `Dockerfile.ext` file. The file has to start with the statement `FROM judge0_build as judge0_builder_{name_of_subject}`, since the files are concatenated into a multistage docker build image. After the `FROM` statement the files can be written as regular Dockerfiles, only the `FROM` statement is "reserved". Example from the *nasp* subdirectory, where we require the **Eigen** library depndency:
 
 ```
 FROM judge0_builder as judge0_builder
