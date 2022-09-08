@@ -9,8 +9,6 @@ RUN set -xe && \
     rm -rf /tmp/*
 
 
-RUN apt-get update && \
-    apt-get install -y python3-pip && \
-    pip3 install numpy
-
+RUN /usr/local/python-3.8.1/bin/pip3.8 install --upgrade pip && \
+    /usr/local/python-3.8.1/bin/pip3.8 install numpy
 
