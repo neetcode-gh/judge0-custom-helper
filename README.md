@@ -18,7 +18,7 @@ The `Dockerfile.langs` file is responsible for injecting additional language dep
 Additional dependencies are specified in a `Dockerfile.ext` file. The file has to start with the statement `FROM judge0_build as judge0_builder_{name_of_subject}`, since the files are concatenated into a multistage docker build image. After the `FROM` statement the files can be written as regular Dockerfiles, only the `FROM` statement is "reserved". Example from the *nasp* subdirectory, where we require the **Eigen** library depndency:
 
 ```
-FROM judge0_builder as judge0_builder
+FROM judge0_builder as judge0_builder_nasp
 
 ENV EIGEN_VERSION 3.3.8
 RUN set -xe && \
