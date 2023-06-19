@@ -77,7 +77,7 @@ create_ruby_files() {
     mkdir -p lang_imports
     mkdir -p lang_imports/edgar_langs
     echo "require_relative 'edgar_langs/edg_lang_id_start'" > lang_imports/imp_edgar_langs.rb
-    for lang_file in $IMP_FILES; do
+    for lang_file in "${IMP_FILES[@]}"; do
         FNAME=$(basename ${lang_file} .json)
         FPATH="lang_imports/edgar_langs/${FNAME}.rb"
         echo "@edgar_langs ||= []" > ${FPATH}
