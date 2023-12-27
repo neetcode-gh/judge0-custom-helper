@@ -143,22 +143,6 @@ build_docker_image() {
     fi
 }
 
-######################
-# Push docker image  #
-#                    #
-# Args:              #
-#   docker_img_name  #
-#                    #
-# Tries to login to  #
-# the registry and   #
-# pushes the docker  #
-# image.             #
-######################
-push_image() {
-    echo "Log in to the Gitlab registry"
-    docker login registry.gitlab.com
-    docker push $1
-}
 
 clean_lang_imports() {
     rm -rf lang_imports
@@ -181,7 +165,7 @@ clean() {
 ########
 # Main #
 ########
-while getopts hcj:r:o: option; do
+while getopts hcj:r:o:g: option; do
     case $option in
         h) # display _help
             _help

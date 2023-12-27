@@ -1,2 +1,3 @@
 RUN /usr/local/python-3.8.1/bin/pip3.8 install --upgrade pip && \
-    /usr/local/python-3.8.1/bin/pip3.8 install numpy
+    /usr/local/python-3.8.1/bin/pip3.8 install numpy && \
+    /usr/local/python-3.8.1/bin/pip3.8 install torch

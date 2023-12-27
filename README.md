@@ -1,5 +1,11 @@
 # Judge0
-> Edgar's extended version of Judge0.
+
+## Build
+
+```
+./build_image.sh -r us-central1-docker.pkg.dev -g neetcode-dd170/judge0
+```
+
 
 This project automates importing additional libraries, languages, etc. along with Judge0.
 
